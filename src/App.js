@@ -1,23 +1,117 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./Components/Header";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  HashRouter,
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <Router>
+        <Header />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>{" "}
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+        <p>
+          Loreasdasdasdasdasdasdasdasdasdm
+          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
+        </p>
+      </Router>
     </div>
   );
 }
