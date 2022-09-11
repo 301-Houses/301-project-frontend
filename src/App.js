@@ -1,3 +1,6 @@
+import React from "react";
+import WhyUsSection from "./Components/whyUs/WhyUs";
+import PremiumAdsSection from "./Components/PremiumAds/PremiumAds";
 import Options from './Components/Options/Options';
 import Statistics from './Components/Statistics/Statistics';
 import "./App.css";
@@ -10,6 +13,7 @@ import {
   HashRouter,
 } from "react-router-dom
 
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +21,7 @@ function App() {
         <Header />
         <Statistics/>
         <Options/>
+        <PremiumAdsSection/>
       
       </Router>
     </div>
@@ -24,3 +29,4 @@ function App() {
 }
 
 export default App;
+

@@ -1,0 +1,28 @@
+.whyUs{
+    text-align: center;
+	display: flex;
+	justify-content:space-between;
+	padding-left: 260px;
+  padding-right: 260px;
+  
+}
+.part{
+   
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    width: 100px;
+  
+}
+.myimg2{
+  width: 70px;
+  margin: 50px;
+  
+}
+.part p{
+width: 300px;
+font-size: 12px;
+text-align: center;
+
+}
