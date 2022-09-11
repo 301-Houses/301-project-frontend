@@ -1,116 +1,23 @@
-import logo from "./logo.svg";
+import Options from './Components/Options/Options';
+import Statistics from './Components/Statistics/Statistics';
 import "./App.css";
 import Header from "./Components/Header";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   HashRouter,
-} from "react-router-dom";
+} from "react-router-dom
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Header />
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>{" "}
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
-        <p>
-          Loreasdasdasdasdasdasdasdasdasdm
-          LoreasdasdasdasdasdasdasdasdasdmLoreasdasdasdasdasdasdasdasdasdm
-        </p>
+        <Statistics/>
+        <Options/>
+      
       </Router>
     </div>
   );
