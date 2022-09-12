@@ -16,7 +16,7 @@ background-color: rgb(241, 233, 233);
 text-align: center;
 height: 300px;
 } */
-.card{
+.cardOption{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@ height: 300px;
     
     
   }
-  .card  img{
+  .cardOption  img{
     
         position:relative;
         display:flex;
@@ -55,7 +55,7 @@ height: 300px;
         max-height: 150px;
        
   }
-  .card  button {
+  .cardOption  button {
     border: 5em;
     cursor: pointer;
     outline: none;
@@ -71,14 +71,14 @@ height: 300px;
     color: white;
   }
   
-  .card button .text {
+  .cardOption button .text {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(45deg, #4568dc,rgba(97,126,170,255));
   }
   
-  .card button:after {
+  .cardOption button:after {
     content: "";
     border-radius: 18px;
     position: absolute;
@@ -91,15 +91,15 @@ height: 300px;
     background: rgba(97,126,170,255);
   }
   
-  .card button:hover {
+  .cardOption button:hover {
     background-image: linear-gradient(-45deg, #4568dc, rgba(97,126,170,255));
     box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
   }
   
-  .card button:hover .text {
+  .cardOption button:hover .text {
     background-image: linear-gradient(-45deg, #4568dc, rgba(97,126,170,255));
   }
-  .card p{
+  .cardOption p{
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
@@ -107,6 +107,6 @@ height: 300px;
     font-family: 'Merriweather', serif;
     
   }
-  .card h2{
+  .cardOption h2{
     font-family: 'Merriweather', serif;
   }

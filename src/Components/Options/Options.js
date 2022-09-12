@@ -9,7 +9,7 @@ export class Options extends Component {
   render() {
     return (
       <div className="container">
-        <div className="card">
+        <div className="cardOption">
           <img src={img1}></img>
           <h2> Buy home</h2>
           <p>
@@ -25,7 +25,7 @@ export class Options extends Component {
             <LoginButton text="Buy a House" />
           )}
         </div>
-        <div className="card">
+        <div className="cardOption">
           <img src={img2}></img>
           <h2> Sell a home</h2>
           <p>
@@ -40,7 +40,7 @@ export class Options extends Component {
             <LoginButton text="Sell a House" />
           )}
         </div>
-        <div className="card">
+        <div className="cardOption">
           <img src={img3}></img>
           <h2> Rent a home</h2>
           <p>

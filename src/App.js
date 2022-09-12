@@ -41,8 +41,7 @@ class App extends React.Component {
 export default withAuth0(App);
 
 /*
-
-          <Routes>
+    <Routes>
             <Route
               exact
               path="/"
