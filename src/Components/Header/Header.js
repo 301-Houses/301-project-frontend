@@ -105,7 +105,7 @@ class Header extends React.Component {
                 <img src={picture} width={"40px"} />
               </button>
 
-              <div className="card text-start">
+              <div className="profileCard text-start">
                 <div className="card-body px-4 py-4">
                   <div id="circle-avatar" className="text-center mx-auto mb-4">
                     <span>{given_name.slice(0, 1).toUpperCase()}</span>
@@ -144,6 +144,28 @@ class Header extends React.Component {
             </PopupMenu>
           )}
         </Navbar>
+
+        <div className="headerContent">
+          <div className="firstHeader">
+            <h1>Move to What Moves You</h1>
+            <h1> Historic & Charming Apartments </h1>
+            <p>
+              With Sweet Home We are proud to present carefully selected Houses{" "}
+              <br /> in the most elegant way to your admiration and
+              satisfaction.
+            </p>
+
+            <div className="getStarted">
+              <button
+                type="button"
+                className="btn btn-outline-primary"
+                data-mdb-ripple-color="dark"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
