@@ -1,0 +1,121 @@
+Modal {
+    
+  font-family: 'Poppins', sans-serif;
+  background: white;
+  padding: 40px 25px;
+  border-top: 6px solid #17c0eb;
+}
+
+.mBody{
+    
+  font-family: 'Poppins', sans-serif;
+  background: rgb(255, 255, 255);
+  padding: 40px 25px;
+  border-top: 6px solid #17c0eb;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: rgb(147, 133, 133);
+text-decoration: none;
+cursor: pointer;
+}
+
+.dialog{
+  padding: 2px 16px;
+  background-color: #171f17;
+  color: white;
+}
+
+.footer{
+  padding: 2px 16px;
+  background-color: #848f84;
+  color: white;
+
+}
+.header{
+  padding: 2px 16px;
+  background-color: #848f84;
+  color: white;
+}
+input[type=text] {
+
+width:60%;
+padding: 7px 0;
+font-size: 16px;
+color: #fff;
+margin-bottom: 30px;
+border: none;
+border-bottom: 1px solid #fff;
+outline: none;
+background: transparent;
+}
+input[type=text]:focus {
+  width: 100%;
+}
+ .form label {
+  /* position: absolute; */
+  text-align: left;
+  display: flex;
+ 
+  padding:  10px 20px;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+top: -20px;
+left: 0;
+color: #03e9f4;
+font-size: 12px;
+}
+
+form {
+
+filter: contrast(1); font-family: 'Poppins', sans-serif;
+  background: #03e9f4;
+  padding: 40px 25px;
+  border-top: 6px solid #17c0eb;
+  color: aliceblue;
+text-align: center;
+  
+
+}
+
+.form{
+  mix-blend-mode: multiply;
+filter: contrast(1);
+}
+.bb{
+position: relative;
+display: inline-block;
+padding: 10px 20px;
+color: #03e9f4;
+font-size: 16px;
+text-decoration: none;
+text-transform: uppercase;
+overflow: hidden;
+transition: .5s;
+margin-top: 40px;
+letter-spacing: 4px
+}
+.bb:hover {
+background: #03e9f4;
+color: #fff;
+border-radius: 5px;
+box-shadow: 0 0 5px #03e9f4,
+            0 0 25px #03e9f4,
+            0 0 50px #03e9f4,
+            0 0 100px #03e9f4;
+}
+.rad-label{
+cursor: pointer;
+}
