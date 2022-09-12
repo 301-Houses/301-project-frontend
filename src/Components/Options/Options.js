@@ -7,7 +7,7 @@ export class Options extends Component {
   render() {
     return (
       <div className="container">
-        <div className="card">
+        <div className="cardOption">
           <img src={img1}></img>
           <h2> Buy home</h2>
           <p>
@@ -17,7 +17,7 @@ export class Options extends Component {
           </p>
           <button> Buy a home</button>
         </div>
-        <div className="card">
+        <div className="cardOption">
           <img src={img2}></img>
           <h2> Sell a home</h2>
           <p>
@@ -27,7 +27,7 @@ export class Options extends Component {
           </p>
           <button> see your options</button>
         </div>
-        <div className="card">
+        <div className="cardOption">
           <img src={img3}></img>
           <h2> Rent a home</h2>
           <p>
