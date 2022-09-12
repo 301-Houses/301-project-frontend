@@ -1,14 +1,17 @@
+ 
+ 
 .container2{
+     
     display: flex;
-    flex-wrap: wrap;
+ 
     justify-content: center;
-    max-width: 1200px;
-    margin-block: 2rem;
+     
+   
     gap:170px;
     background-color: rgb(255, 255, 255);
     width: 100%;
-    padding-left: 75px;
-    padding-right: 75px;
+    padding: 100px
+     
     
 }
 .card2{
@@ -23,12 +26,16 @@
     width:280px;
     border-radius:15px;
     backdrop-filter:blur(5px) ;
-    background:rgb(255 255 255);
-    overflow: hidden;
+    
+ 
     margin:30px;
    height: 150px;
     gap: 5px;
     width: 75px;
+    /* padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px; */
     
     
   }

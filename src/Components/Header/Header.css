@@ -6,9 +6,9 @@
 .navbarBackground {
  background-image: url('https://www.summitsothebysrealty.com/localimagereader.ashx?imageurl=https%3A%2F%2Fsir.azureedge.net%2F1103i215%2Fyfr5s0f52gqe4gjk2xzd2wh4h4i215&imagecache=true'); 
  
- padding-bottom :800px;
+ padding-bottom :1000px;
  background-size: cover;
- filter: brightness(55%);
+ filter: brightness(35%);
 
 }
 
@@ -19,7 +19,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-
+  z-index: 5;
   
   
   justify-content: space-between;  
@@ -75,9 +75,10 @@ color: black;
 }
 
 
-.card {
+.profileCard {
     width: 250px;
     color: black;
+    background: white;
 
 }
 
@@ -90,7 +91,51 @@ color: black;
     place-items: center;
 }
 
-span  {
+.profileCard span  {
 font-size: 48px;
 font-weight: bold;
+}
+
+.headerContent {
+
+    position: absolute;
+    text-align: center;
+    
+    left: 18%;
+    top: 40%;
+    z-index: 10;
+    color: white;
+    
+}
+ 
+
+.headerContent .firstHeader{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+   
+    
+}
+
+.headerContent h1 {
+    font-size : 55px;
+    text-align: left;
+}
+
+.headerContent p {
+    font-size : 24px;
+    text-align: left;
+}
+
+
+
+.headerContent button {
+    font-size : 40px;
+    
+}
+
+.getStarted {
+    text-align : right;
+    padding-right: 195px;
 }
