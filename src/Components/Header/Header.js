@@ -1,24 +1,25 @@
 import React from "react";
 import { PopupMenu } from "react-simple-widgets";
-
 import { Navbar, NavItem } from "react-bootstrap";
 import { Link } from "react-router-dom";
-// import LoginButton from "./LoginButton";
-// import LogoutButton from "./LogoutButton";
 import "bootstrap/dist/css/bootstrap.min.css";
 import image1 from "./test2.jpg";
 import "./Header.css";
 import profileImg from "./profileIMG.png";
+
+import { withAuth0 } from "@auth0/auth0-react";
+import LoginButton from "./../OAuth/LoginButton";
+import LogoutButton from "./../OAuth/LogoutButton";
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       style: "mainNavBar",
+      user: {},
     };
   }
   handleScroll = (e) => {
-    console.log(window.pageYOffset);
     if (window.pageYOffset > 690) {
       this.setState({ style: "mainNavBar sticky" });
     }
@@ -29,15 +30,28 @@ class Header extends React.Component {
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
+
+    let { isAuthenticated, user } = this.props.auth0;
+    if (this.props.auth0.hasOwnProperty("user")) {
+      console.log("Logged");
+      this.setState({ user: user });
+    } else console.log("Not Logged");
   }
 
   render() {
-    let email = this.props.email || "alaslabood@gmail.com";
-    let given_name = this.props.given_name || "Abdel rahman alasal";
-    let picture = this.props.picture || profileImg;
-    let language = this.props.locale || "EN";
+    const { isAuthenticated, user } = this.props.auth0;
 
-    let isLoggedIn = true;
+    let userData = {};
+    if (isAuthenticated) userData = user;
+
+    let email = userData.email || "test@gmail.com";
+    let given_name = userData.given_name || "test test";
+    let picture = userData.picture || profileImg;
+    //let picture = profileImg;
+
+    let language = userData.locale || "EN";
+    let isLoggedIn = isAuthenticated || false;
+
     return (
       <div onScroll={this.handleScroll}>
         <div className="navbarBackground"></div>
@@ -63,8 +77,8 @@ class Header extends React.Component {
                   </NavItem>
 
                   <NavItem>
-                    <Link to="/" className="nav-link">
-                      Sell
+                    <Link to="/Sell-Rent" className="nav-link">
+                      Sell/Rent
                     </Link>
                   </NavItem>
 
@@ -75,7 +89,7 @@ class Header extends React.Component {
                   </NavItem>
 
                   <NavItem>
-                    <Link to="/" className="nav-link">
+                    <Link to="/YourAssests" className="nav-link">
                       Your Assests
                     </Link>
                   </NavItem>
@@ -92,9 +106,7 @@ class Header extends React.Component {
                 </Link>
               </NavItem>
               <NavItem>
-                <Link to="/about" className="nav-link">
-                  Sign In
-                </Link>
+                <LoginButton />
               </NavItem>
             </div>
           )}
@@ -102,7 +114,11 @@ class Header extends React.Component {
           {isLoggedIn && (
             <PopupMenu className="profile">
               <button className=" profile">
-                <img src={picture} width={"40px"} />
+                <img
+                  src={picture}
+                  width={"50px"}
+                  styles={{ borderRadius: "50px" }}
+                />
               </button>
 
               <div className="profileCard text-start">
@@ -135,9 +151,7 @@ class Header extends React.Component {
                   <hr style={{ margin: "0 -24px 24px" }} />
 
                   <div className="d-grid">
-                    <button className="btn btn-secondary">
-                      <small>Logout</small>
-                    </button>
+                    <LogoutButton />
                   </div>
                 </div>
               </div>
@@ -155,15 +169,17 @@ class Header extends React.Component {
               satisfaction.
             </p>
 
-            <div className="getStarted">
-              <button
-                type="button"
-                className="btn btn-outline-primary"
-                data-mdb-ripple-color="dark"
-              >
-                Get Started
-              </button>
-            </div>
+            {!isLoggedIn && (
+              <div className="getStarted">
+                <button
+                  type="button"
+                  className="btn btn-outline-primary"
+                  data-mdb-ripple-color="dark"
+                >
+                  <LoginButton text="Get Started" />
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -171,4 +187,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default withAuth0(Header);
