@@ -1,62 +1,86 @@
-
-.services {
-    display: inline-flex; 
+.houseCard {
+   
     background-color: #fff;
     padding: 90px 0 0px 0;
     display: flex;
     justify-content: center;
     float: none; 
-    margin-bottom: 10px;
-    margin-left: 18%;
-    margin-right: 18%;
     width:100%;
-    padding-left: 30px;
-    column-gap: 3.7%;
+    column-gap: 3.5%;
+    
  
 }
 
-.services .services_box {
+.houseCard .houseCard_box {
     overflow: hidden;  
-    background-color: rgba(213, 213, 213, 0.325);
-    text-align: center;
-    border-radius: 3rem;   
+    background-color: rgba(218, 217, 217, 0.229);
+    text-align: left;
+    border-radius: 1rem;   
     width: 25vw;
-    height: 35vw;    
-    box-shadow: 0 8px 16px 0 rgb(213, 213, 213);
+    height: 28vw;    
+    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.15);
+    
         
 }
 
+.houseCard .houseCard_box h1{
+   
+    font-size: 25px;
+    display: inline;
+    color: #1C3879;
+      
+}
 
-.services .services_box h1{
+.houseCard .houseCard_box .det{
      font-family: Georgia;
-     font-size: 35px;
-     padding-left: 10px;    
+     font-size: 18px;
+     margin-left: 20px;  
+     margin-top: 10px;  
+     
 }
 
-
-#serv_hover:hover.services_box {
+#houseCard_hover:hover.houseCard_box {
     cursor: pointer;
-    box-shadow: 0px 0px 30px rgba(57, 56, 56, 0.2);
+    box-shadow: 0px 0px 30px rgba(113, 113, 113, 0.602);
     background-color: #fff;
-    border-top: #9e9e9e solid 6px;
+    border-top: #1C3879 solid 6px;
     transition: ease-in all 0.5s;
 }
 
-#serv_hover:hover.services_box h1 {
+#houseCard_hover:hover.houseCard_box .det h1 {
     color: #000000f4;
-  
-   
+
     transition: ease-in all 0.5s;
 }
-#serv_hover:hover.services_box #status {
-    color: #37e90bf4;
-  
-   
+#houseCard_hover:hover.houseCard_box #loc {
+    color: #1C3879;
     transition: ease-in all 0.5s;
+}
+
+#loc p {
+    margin-bottom:4px;
 }
 
 
 .img00{
     width: 350px;
-    height: 230px;
+    height: 260px;
+
+}
+.premium{
+    
+    position:absolute;
+    margin: 12px;
+    display: inline;
+    padding: 5px 10px;
+   
+    border-radius: 2px; 
+    text-align: center;
+    color: #fff;
+    background-color:  #0fc206;
+}
+
+.det img{
+    width: 25px;
+    margin-right: 10px;
 }

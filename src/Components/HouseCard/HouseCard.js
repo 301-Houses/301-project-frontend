@@ -1,7 +1,10 @@
 import React from "react";
 import img00 from "./1403962.jpg";
-import "./HouseForm.css";
-import HouseModal from "../HouseModale/HousModal";
+import "./HouseCard.css";
+import HouseModal from "../HouseModal/HouseModal";
+import icon1 from "./navigator.png";
+import icon2 from "./real-estate.png";
+
 class HouseCard extends React.Component {
   constructor(props) {
     super(props);
@@ -27,35 +30,76 @@ class HouseCard extends React.Component {
   render() {
     return (
       <>
-        <div className="services">
-          <div id="serv_hover" className="services_box">
-            <img className="img00" src={img00} alt="#" />
-            <h1>For sell</h1>
-            <p id="status">available </p>
-            <p>2 dbs | 3ath | 150-162</p>
+        <div className="houseCard">
+          <div id="houseCard_hover" className="houseCard_box">
+          <label className="premium">For sell</label>
+
+            <img  onClick={this.handleShow} className="img00" src={img00} alt="#" />
+            <div className="det">
+            <div>
+                  <span>
+                    <img  src={icon2} alt="#" />
+                  </span>
+                  {/* <span></span> */}
+                  <h1>90000 JD</h1>
+                </div>
+                <div>
+                  <span>
+                    <img  src={icon1} alt="#" />
+                  </span>
+                  <span id ="loc">Amman Amman</span>
+                </div>
+                       
+            </div>
+           
           </div>
 
-          <div id="serv_hover" className="services_box">
-            <img
-              className="img00"
-              src={img00}
-              alt="#"
-              onClick={this.handleShow}
-            />
-            <h1>For sell</h1>
-            <p id="status">available </p>
-            <p></p>
-          </div>
-          <div id="serv_hover" className="services_box">
-            <img className="img00" src={img00} alt="#" />
-            <h1>For sell</h1>
-            <p id="status">available </p>
+          <div id="houseCard_hover" className="houseCard_box">
+          <label className="premium">For sell</label>
 
-            <p>2 dbs | 3ath | 150-162</p>
-            <button>button</button>
-            <button>button</button>
+            <img  onClick={this.handleShow} className="img00" src={img00} alt="#" />
+            <div className="det">
+            <div>
+                  <span>
+                    <img  src={icon2} alt="#" />
+                  </span>
+                  {/* <span></span> */}
+                  <h1>90000 JD</h1>
+                </div>
+                <div>
+                  <span>
+                    <img  src={icon1} alt="#" />
+                  </span>
+                  <span id ="loc">Amman Amman</span>
+                </div>
+                       
+            </div>
+           
           </div>
-        </div>
+          
+          <div id="houseCard_hover" className="houseCard_box">
+          <label className="premium">For sell</label>
+
+            <img  onClick={this.handleShow} className="img00" src={img00} alt="#" />
+            <div className="det">
+            <div>
+                  <span>
+                    <img  src={icon2} alt="#" />
+                  </span>
+                  {/* <span></span> */}
+                  <h1>90000 JD</h1>
+                </div>
+                <div>
+                  <span>
+                    <img  src={icon1} alt="#" />
+                  </span>
+                  <span id ="loc">Amman Amman</span>
+                </div>
+                       
+            </div>
+           
+          </div>
+          </div>
 
         <HouseModal show={this.state.show} closeModal={this.handleClose} />
       </>

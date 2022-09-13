@@ -1,0 +1,49 @@
+.imgM{
+    width: 463px;
+    height: 300px;
+    border-radius: 1rem; 
+
+}
+
+.modal-content{
+    background-color: rgba(255, 255, 255, 0.867);
+    width: 150;
+    font-size: 10px;
+    border-radius: 1rem; 
+    
+}
+
+.info{
+    align-items: stretch;
+    justify-content: space-around;
+    display: flex;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+          
+}
+.info .house  div{
+     padding-bottom: 20px;
+}
+.info .owner  div{
+    padding-bottom: 20px;
+}
+
+.info .house  img{
+    width:25px;
+    
+   
+}
+
+.info .owner  img{
+    width: 25px;
+    
+}
+
+.info  span {
+    font-size: 14px;
+    padding-left: 5px;
+
+   
+}
+
