@@ -89,9 +89,10 @@ export class AssetsCards extends Component {
 
     }
     handleChange=(e)=>{
-        console.log("hello")
-        
-        console.log(e.target.id)
+        console.log(e.target.value)
+        console.log(e.target.name)
+        console.log(e.target.theName)
+
         this.setState({
             name:e.target.id
         })

@@ -36,9 +36,9 @@ export class AssetsModal extends Component  {
      <input type="checkbox" id="ispremium" name="ispremium" ></input>
 <label for="ispremium"> Premium</label><br/>
 
-<input onClick={this.props.handleChange} type="radio" id="forRent" name="status" ></input>
+<input onClick={this.props.handleChange} type="radio" id="forRent" name="status" value="forRent" ></input>
 <label for="status">for Rent</label><br/>
-<input onClick={this.props.handleChange} type="radio" id="forSale" name="status" ></input>
+<input onClick={this.props.handleChange} type="radio" id="forSale" name="status" value="forSale" ></input>
 <label  for="status"> for Sale</label><br/>
 
 
