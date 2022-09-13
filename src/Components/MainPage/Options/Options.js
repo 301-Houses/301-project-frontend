@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./Options.css";
-import img1 from "../assets/card1.jpg";
-import img2 from "../assets/card2.jpg";
-import img3 from "../assets/card3.jpg";
+import img1 from "../../assets/card1.jpg";
+import img2 from "../../assets/card2.jpg";
+import img3 from "../../assets/card3.jpg";
 import { Link } from "react-router-dom";
-import LoginButton from "../OAuth/LoginButton";
+import LoginButton from "../../OAuth/LoginButton";
 export class Options extends Component {
   render() {
     return (

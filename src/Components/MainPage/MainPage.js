@@ -2,10 +2,10 @@ import React from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Statistics from "./../Statistics/Statistics";
-import Options from "./../Options/Options";
-import PremiumAdsSection from "./../PremiumAds/PremiumAds";
-import WhyUsSection from "./../whyUs/WhyUs";
+import Statistics from "./Statistics/Statistics";
+import Options from "./Options/Options";
+import PremiumAdsSection from "./PremiumAds/PremiumAds";
+import WhyUsSection from "./whyUs/WhyUs";
 
 import { withAuth0 } from "@auth0/auth0-react";
 

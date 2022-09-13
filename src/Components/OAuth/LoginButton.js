@@ -12,7 +12,8 @@ function LoginButton(props) {
         style={{
           backgroundColor: "transparent",
           border: "none",
-          color: "white",
+          fontSize: "28px",
+          padding: "4px 10px 4px 10px",
         }}
         onClick={loginWithRedirect}
       >
