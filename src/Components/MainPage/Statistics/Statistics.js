@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./Statistics.css";
-import img1 from "../assets/for-rent.png";
-import img2 from "../assets/for-sale.png";
-import img3 from "../assets/home.png";
-import img4 from "../assets/sold.png";
+import img1 from "../../assets/for-rent.png";
+import img2 from "../../assets/for-sale.png";
+import img3 from "../../assets/home.png";
+import img4 from "../../assets/sold.png";
 export class Statistics extends Component {
   render() {
     return (

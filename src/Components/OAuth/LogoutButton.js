@@ -13,7 +13,7 @@ function LogoutButton() {
           logout({ returnTo: window.location.origin });
         }}
       >
-        LogOut
+        Log out
       </button>
     )
   );

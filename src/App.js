@@ -3,6 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Header from "./Components/Header/Header";
 import MainPage from "./Components/MainPage/MainPage";
+import BrowsePage from "./Components/BrowseHousesPage/BrowseHouses";
+import SellRent from "./Components/Sell-Rent/Sell-Rent";
+import YourAssets from "./Components/YourAssestsPage/YourAssets";
 
 import Footer from "./Components/Footer/Footer";
 import { withAuth0 } from "@auth0/auth0-react";
@@ -12,6 +15,7 @@ import {
   Routes,
   Route,
   HashRouter,
+  Navigate,
 } from "react-router-dom";
 
 class App extends React.Component {
@@ -23,12 +27,30 @@ class App extends React.Component {
         <Router>
           <Header />
           <Routes>
+            <Route exact path="/" element={<MainPage />} />
+          </Routes>
+
+          <Routes>
             <Route
               exact
-              path="/"
-              element={
-                <MainPage isAuthenticated={isAuthenticated} user={user} />
-              }
+              path="/BrowseHouses"
+              element={isAuthenticated ? <BrowsePage /> : <Navigate to="/" />}
+            />
+          </Routes>
+
+          <Routes>
+            <Route
+              exact
+              path="/Sell-Rent"
+              element={isAuthenticated ? <SellRent /> : <Navigate to="/" />}
+            />
+          </Routes>
+
+          <Routes>
+            <Route
+              exact
+              path="/YourAssests"
+              element={isAuthenticated ? <YourAssets /> : <Navigate to="/" />}
             />
           </Routes>
           <Footer />
