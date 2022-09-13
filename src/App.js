@@ -87,5 +87,4 @@ export default withAuth0(App);
               element={isAuthenticated && <YourAssests />}
             />
           </Routes>
-
 */

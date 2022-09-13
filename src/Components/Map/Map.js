@@ -17,6 +17,7 @@ export const Map = () => {
       {/* <MarkerLayer data={cities} /> */}
       <LocationMarker />
       <DraggableMarker myPosition={myPosition}/>
+      
     </MapContainer>
   );
 };
