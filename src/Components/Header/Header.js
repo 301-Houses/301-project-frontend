@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import image1 from "./test2.jpg";
 import "./Header.css";
 import profileImg from "./profileIMG.png";
+import logo from "./Logo1.png";
 
 import { withAuth0 } from "@auth0/auth0-react";
 import LoginButton from "./../OAuth/LoginButton";
@@ -61,8 +62,9 @@ class Header extends React.Component {
             <Navbar.Brand className="logo">
               <Link to="/" className="nav-link">
                 <img
-                  width="66px"
-                  src="https://i.pinimg.com/736x/0d/cf/b5/0dcfb548989afdf22afff75e2a46a508.jpg"
+                  width="100px"
+                  className="hide-bg"
+                  src={logo}
                 ></img>
               </Link>
             </Navbar.Brand>

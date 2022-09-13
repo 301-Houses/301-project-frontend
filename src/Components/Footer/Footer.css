@@ -1,6 +1,6 @@
 
 .FooterContainer {
-  background: rgb(32, 32, 32);
+  background: rgb(0, 0, 0);
   display:flex;
   justify-content:space-between;
   padding-left: 60px;
@@ -101,4 +101,15 @@
 button a {
   text-decoration: none;
   color: white; 
+}
+
+.icons{
+  width: 50px;
+  background-color: beige;
+  border-radius: 35px;
+
+
+}
+.last label{
+  font-size: large;
 }
