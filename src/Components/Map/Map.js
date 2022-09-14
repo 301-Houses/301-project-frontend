@@ -8,12 +8,20 @@ import {
   Popup,
 } from "react-leaflet";
 import { useRef, useMemo, useCallback } from "react";
-
+import L from "leaflet";
+// C:\Users\SUPER\Desktop\14-9\301-project-frontend\src\Components\Map\markersIcon.jpg
 const myPosition = [0, 0];
+
+const MapIcon = new L.icon({
+  iconUrl: require("./markerTest.jpg"),
+  iconSize: [40, 40],
+});
 
 const Map = (props) => {
   const position = [0, 0];
-
+  // var map = L.map("map").fitWorld();
+  // map.locate({ setView: true, maxZoom: 16 });
+  if (props.position !== undefined) position = props.position;
   return (
     <MapContainer center={position} zoom={5} scrollWheelZoom={true}>
       <TileLayer
@@ -30,6 +38,7 @@ const Map = (props) => {
 function LocationMarker(props) {
   const [position, setPosition] = useState(null);
   console.log();
+
   const map = useMapEvents({
     click() {
       map.locate();
@@ -38,13 +47,11 @@ function LocationMarker(props) {
       props.getPostion(e.latlng);
       setPosition(e.latlng);
       console.log(e.latlng);
-      myPosition = e.latlng;
-      map.flyTo(e.latlng, map.getZoom());
     },
   });
-
+  if (position) map.flyTo(position, map.getZoom());
   return position === null ? null : (
-    <Marker position={position}>
+    <Marker icon={MapIcon} position={position}>
       <Popup>You are here</Popup>
     </Marker>
   );
@@ -73,6 +80,7 @@ function DraggableMarker(props) {
 
   return (
     <Marker
+      icon={MapIcon}
       draggable={draggable}
       eventHandlers={eventHandlers}
       position={position}

@@ -15,224 +15,6 @@ import { useRef, useMemo, useCallback } from "react";
 import L from "leaflet";
 
 const myPosition = [0, 0];
-const data = [
-  {
-    _id: "63209d30587281cea1c0618a",
-    ispremium: false,
-    imgURL: "https://wallpaperaccess.com/full/3572596.jpg",
-    ownerName: "monther",
-    houseAddress: "amman",
-    email: "test2@gmail.com",
-    houseSize: 150,
-    numOfRoomse: 4,
-    isSold: false,
-    price: 2000,
-    phoneNumber: "0654612345",
-    status: "for rent",
-    lat: 33,
-    long: 34,
-    poster_date: "2022-09-12T21:00:00.000Z",
-    __v: 0,
-  },
-  {
-    _id: "63209d3b1b08cfd5ea52b6ee",
-    ispremium: false,
-    imgURL: "https://wallpaperaccess.com/full/3572596.jpg",
-    ownerName: "monther",
-    houseAddress: "amman",
-    email: "test2@gmail.com",
-    houseSize: 150,
-    numOfRoomse: 4,
-    isSold: false,
-    price: 2000,
-    phoneNumber: "0654612345",
-    status: "for rent",
-    lat: 33,
-    long: 34,
-    poster_date: "2022-09-12T21:00:00.000Z",
-    __v: 0,
-  },
-  {
-    _id: "63209d3b1b08cfd5ea52b6ef",
-    ispremium: false,
-    imgURL: "https://wallpaperaccess.com/full/3060228.jpg",
-    ownerName: "monther",
-    houseAddress: "amman",
-    email: "test2@gmail.com",
-    houseSize: 150,
-    numOfRoomse: 3,
-    isSold: false,
-    price: 2000,
-    phoneNumber: "0654612345",
-    status: "for rent",
-    lat: 31,
-    long: 37,
-    poster_date: "2022-09-12T21:00:00.000Z",
-    __v: 0,
-  },
-  {
-    _id: "63209d3e9068417625d0b523",
-    ispremium: false,
-    imgURL: "https://wallpaperaccess.com/full/3572596.jpg",
-    ownerName: "monther",
-    houseAddress: "amman",
-    email: "test2@gmail.com",
-    houseSize: 150,
-    numOfRoomse: 4,
-    isSold: false,
-    price: 2000,
-    phoneNumber: "0654612345",
-    status: "for rent",
-    lat: 33,
-    long: 34,
-    poster_date: "2022-09-12T21:00:00.000Z",
-    __v: 0,
-  },
-  {
-    _id: "63209d3e9068417625d0b524",
-    ispremium: false,
-    imgURL: "https://wallpaperaccess.com/full/3060228.jpg",
-    ownerName: "monther",
-    houseAddress: "amman",
-    email: "test2@gmail.com",
-    houseSize: 150,
-    numOfRoomse: 3,
-    isSold: false,
-    price: 2000,
-    phoneNumber: "0654612345",
-    status: "for rent",
-    lat: 31,
-    long: 37,
-    poster_date: "2022-09-12T21:00:00.000Z",
-    __v: 0,
-  },
-  {
-    _id: "63209d3e9068417625d0b525",
-    ispremium: false,
-    imgURL: "https://wallpaperaccess.com/full/3572808.jpg",
-    ownerName: "monther",
-    houseAddress: "amman",
-    email: "test2@gmail.com",
-    houseSize: 150,
-    numOfRoomse: 6,
-    isSold: false,
-    price: 2000,
-    phoneNumber: "0654612345",
-    status: "for rent",
-    lat: 35,
-    long: 36,
-    poster_date: "2022-09-12T21:00:00.000Z",
-    __v: 0,
-  },
-  {
-    _id: "63209d449f8f6f758a48814e",
-    ispremium: false,
-    imgURL: "https://wallpaperaccess.com/full/3572596.jpg",
-    ownerName: "monther",
-    houseAddress: "amman",
-    email: "test2@gmail.com",
-    houseSize: 150,
-    numOfRoomse: 4,
-    isSold: false,
-    price: 2000,
-    phoneNumber: "0654612345",
-    status: "for rent",
-    lat: 33,
-    long: 34,
-    poster_date: "2022-09-12T21:00:00.000Z",
-    __v: 0,
-  },
-  {
-    _id: "63209d449f8f6f758a48814f",
-    ispremium: false,
-    imgURL: "https://wallpaperaccess.com/full/3060228.jpg",
-    ownerName: "monther",
-    houseAddress: "amman",
-    email: "test2@gmail.com",
-    houseSize: 150,
-    numOfRoomse: 3,
-    isSold: false,
-    price: 2000,
-    phoneNumber: "0654612345",
-    status: "for rent",
-    lat: 31,
-    long: 37,
-    poster_date: "2022-09-12T21:00:00.000Z",
-    __v: 0,
-  },
-  {
-    _id: "63209d449f8f6f758a488150",
-    ispremium: false,
-    imgURL: "https://wallpaperaccess.com/full/3572808.jpg",
-    ownerName: "monther",
-    houseAddress: "amman",
-    email: "test2@gmail.com",
-    houseSize: 150,
-    numOfRoomse: 6,
-    isSold: false,
-    price: 2000,
-    phoneNumber: "0654612345",
-    status: "for sale",
-    lat: 35,
-    long: 36,
-    poster_date: "2022-09-12T21:00:00.000Z",
-    __v: 0,
-  },
-  {
-    _id: "63209d4c53026b93f3abc758",
-    ispremium: false,
-    imgURL: "https://wallpaperaccess.com/full/3572596.jpg",
-    ownerName: "monther",
-    houseAddress: "amman",
-    email: "test2@gmail.com",
-    houseSize: 150,
-    numOfRoomse: 4,
-    isSold: false,
-    price: 2000,
-    phoneNumber: "0654612345",
-    status: "for rent",
-    lat: 33,
-    long: 34,
-    poster_date: "2022-09-12T21:00:00.000Z",
-    __v: 0,
-  },
-  {
-    _id: "63209d4c53026b93f3abc759",
-    ispremium: false,
-    imgURL: "https://wallpaperaccess.com/full/3060228.jpg",
-    ownerName: "monther",
-    houseAddress: "amman",
-    email: "test2@gmail.com",
-    houseSize: 150,
-    numOfRoomse: 3,
-    isSold: false,
-    price: 2000,
-    phoneNumber: "0654612345",
-    status: "for rent",
-    lat: 31,
-    long: 37,
-    poster_date: "2022-09-12T21:00:00.000Z",
-    __v: 0,
-  },
-  {
-    _id: "63209d4c53026b93f3abc75a",
-    ispremium: false,
-    imgURL: "https://wallpaperaccess.com/full/3572808.jpg",
-    ownerName: "monther",
-    houseAddress: "amman",
-    email: "test2@gmail.com",
-    houseSize: 150,
-    numOfRoomse: 6,
-    isSold: false,
-    price: 2000,
-    phoneNumber: "0654612345",
-    status: "for rent",
-    lat: 35,
-    long: 36,
-    poster_date: "2022-09-12T21:00:00.000Z",
-    __v: 0,
-  },
-];
 
 function LocationMarker() {
   const [position, setPosition] = useState(null);
@@ -285,35 +67,67 @@ class HousesMap extends React.Component {
     console.log(isReady);
     console.log(this.state.data);
     return (
-      <MapContainer center={[33, 35]} zoom={5} scrollWheelZoom={true}>
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        {/* <MarkerLayer data={cities} /> */}
-        {isReady &&
-          this.state.data.map((house) => {
-            if (house.hasOwnProperty("lat") == false) return;
-            return (
-              <Marker position={[house.lat, house.long]} icon={MapIcon}>
-                <Popup>
-                  <div>
-                    <div style={{ width: "18rem" }}>
-                      <img variant="top" src={house.imgURL} width={"100%"} />
-                      <div>
-                        <h1>Card Title</h1>
-                        <p>
-                          Some quick example text to build on the card title and
-                          make up the bulk of the card's content.
-                        </p>
+      <div
+        style={{
+          padding: "100px",
+          textAlign: "center",
+        }}
+      >
+        <MapContainer
+          center={[33, 35]}
+          zoom={5}
+          scrollWheelZoom={true}
+          style={{ width: "90vw" }}
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          {/* <MarkerLayer data={cities} /> */}
+          {isReady &&
+            this.state.data.map((house) => {
+              if (house.hasOwnProperty("lat") == false) return;
+              return (
+                <Marker position={[house.lat, house.long]} icon={MapIcon}>
+                  <Popup>
+                    <div>
+                      <div style={{ width: "18rem" }}>
+                        <img
+                          variant="top"
+                          src={house.imgURL}
+                          width={"100%"}
+                          alt="houseMap"
+                        />
+                        <div>
+                          <h3>
+                            <b>owner name: </b>
+                            {house.ownerName}
+                          </h3>
+                          <p>
+                            <b>House size:</b>
+                            {house.houseSize}
+                          </p>
+                          <p>
+                            <b>Roomse Number :</b>
+                            {house.numOfRoomse}
+                          </p>
+                          <p>
+                            <b>{house.status}</b>
+                          </p>
+
+                          <h4 id="price">
+                            <b>price :</b>
+                            {house.price}$
+                          </h4>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Popup>
-              </Marker>
-            );
-          })}
-      </MapContainer>
+                  </Popup>
+                </Marker>
+              );
+            })}
+        </MapContainer>
+      </div>
     );
   }
 }

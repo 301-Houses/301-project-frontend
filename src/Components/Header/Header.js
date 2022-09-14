@@ -27,7 +27,7 @@ class Header extends React.Component {
     };
   }
   handleScroll = (e) => {
-    if (window.pageYOffset > 690) {
+    if (window.pageYOffset > 290) {
       this.setState({ style: "mainNavBar sticky" });
     }
     if (window.pageYOffset < 690) {
@@ -61,8 +61,6 @@ class Header extends React.Component {
 
     return (
       <div onScroll={this.handleScroll}>
-        <div className="navbarBackground"></div>
-
         <Navbar collapseOnSelect expand="lg" className={this.state.style}>
           <div style={{ display: "flex" }}>
             <Navbar.Brand>
@@ -115,7 +113,7 @@ class Header extends React.Component {
                 </Link>
               </NavItem>
               <NavItem>
-                <LoginButton />
+                <LoginButton id="login" />
               </NavItem>
             </div>
           )}
@@ -167,7 +165,7 @@ class Header extends React.Component {
             </PopupMenu>
           )}
         </Navbar>
-
+        <div className="navbarBackground"></div>
         <div className="headerContent">
           <div className="firstHeader">
             <h1>Move to What Moves You</h1>

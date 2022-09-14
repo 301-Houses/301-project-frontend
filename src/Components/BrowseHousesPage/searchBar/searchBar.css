@@ -10,6 +10,7 @@
 .td {
   display: table-cell;
   vertical-align: middle;
+  font-size : 32px;
 }
 
 .s input,  button {
@@ -56,7 +57,7 @@
   display: block;
   border: 0;
   color: #fff;
-  font-size: 25px;
+  font-size: 35px;
 
 }
 
@@ -67,7 +68,7 @@
 }
 
 .s .dropdown-menu {
-font-size: 25px; 
+font-size: 35px; 
 
 }
 .dropdown-item{
@@ -75,4 +76,12 @@ padding-top: 30px;
 padding-bottom: 20px;
 padding-right: 150px;
 
+}
+
+.s {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.itemMenu {
+  font-size: 24px;
 }

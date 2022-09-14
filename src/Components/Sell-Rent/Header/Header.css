@@ -1,0 +1,160 @@
+* {
+    padding : 0;
+    margin : 0;
+}
+
+.navbarBackground {
+ 
+ 
+ padding-bottom :100px;
+ background-size: cover;
+ 
+ filter: blur(2.3px) brightness(45%);
+
+
+}
+
+.mainNavBar {
+  color: black;
+  display: "flex";
+  gap: 50px;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 45;
+  
+  
+  
+  justify-content: space-between;  
+}
+
+.sticky {
+ 
+background: rgba(255, 255, 255, 0.53);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.2px);
+-webkit-backdrop-filter: blur(5.2px);
+border: 1px solid rgba(255, 255, 255, 0.22);
+color: black;
+}
+
+.logo {
+    margin-left: 20px;
+    padding-left: 20px;
+    margin-right: 40px;
+    width : 160px;
+    
+}
+
+
+
+.navbarLeftDiv{
+    display : flex;
+    gap: 50px;
+    padding-top: 15px;
+    padding-left: 30px;
+    justify-content : center;
+    font-size : 28px;
+    
+} 
+
+.leftSideNav {
+    display : flex;
+    gap: 50px;
+    padding-top: 15px;
+}
+
+.navbarRightDiv {
+    padding-right: 40px;
+    display : flex;
+    gap: 50px;
+    font-size : 28px;
+}
+
+
+
+.profile {
+    z-index: 10;
+    margin-right: 35px;
+    /* margin-top: 20px; */
+    border-radius: 50%;
+    margin-top: -20px;;
+     
+}
+
+.profile img {
+    border-radius: 50%; 
+ 
+}
+
+
+.profileCard {
+    width: 250px;
+    color: black;
+    background: white;
+
+}
+
+#circle-avatar {
+    display: grid;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ffbd30;
+    place-items: center;
+}
+
+.profileCard span  {
+font-size: 48px;
+font-weight: bold;
+}
+
+.headerContent {
+
+    position: absolute;
+    text-align: center;
+    
+    left: 18%;
+    top: 26%;
+    z-index: 10;
+    color: white;
+    
+}
+ 
+
+.headerContent .firstHeader{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+   
+    
+}
+
+.headerContent h1 {
+    font-size : 55px;
+    text-align: left;
+}
+
+.headerContent p {
+    font-size : 24px;
+    text-align: left;
+}
+
+
+
+.headerContent button {
+    font-size : 40px;
+    
+}
+
+.getStarted {
+    text-align : right;
+    padding-right: 195px;
+}
+
+.getStarted button{
+    background-color: rgb(39, 147, 209, 0.5);
+    color: white;
+}
