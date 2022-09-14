@@ -115,7 +115,7 @@ class Header extends React.Component {
                 </Link>
               </NavItem>
               <NavItem>
-                <LoginButton />
+                <LoginButton id="login" />
               </NavItem>
             </div>
           )}

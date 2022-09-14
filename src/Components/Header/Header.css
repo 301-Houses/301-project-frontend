@@ -151,4 +151,10 @@ font-weight: bold;
 .getStarted {
     text-align : right;
     padding-right: 195px;
+    color: white;
 }
+.getStarted button{
+    background-color: rgb(39, 147, 209, 0.5);
+    color: white;
+}
+
