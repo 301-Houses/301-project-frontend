@@ -2,6 +2,7 @@ import React from "react";
 import "./Footer.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import logo from "./logotest.png";
 
 class Footer extends React.Component {
   render() {
@@ -9,34 +10,43 @@ class Footer extends React.Component {
       <>
         <footer
           className="FooterContainer
-      "
+    "
         >
           <div className="socialDiv">
             <div id="Footer-logo">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa-be453KJhBoemf-BLoPq0C2Kuj8YdyVV-Q&usqp=CAU"
-                width={"80px"}
-              />
+              <img src={logo} width={"200px"} />
             </div>
             <div className="iconsDiv">
               <a href="#">
                 <i class="icon ion-social-facebook">
-                  <img src="asdasd" />
+                  <img
+                    class="icons"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/768px-Facebook_f_logo_%282019%29.svg.png"
+                  />
                 </i>
               </a>
               <a href="#">
                 <i class="icon ion-social-twitter">
-                  <img src="./" />
+                  <img
+                    class="icons"
+                    src="https://www.nicepng.com/png/full/130-1309928_free-png-twitter-icon-ios-7-png-images.png"
+                  />
                 </i>
               </a>
               <a href="#">
                 <i class="icon ion-social-snapchat">
-                  <img src="./" />
+                  <img
+                    class="icons"
+                    src="https://i0.wp.com/logotaglines.com/wp-content/uploads/2021/09/Snapchat-Logo-Tagline-Slogan-Owner-Developer-Founder.jpg?fit=640%2C640&ssl=1"
+                  />
                 </i>
               </a>
               <a href="#">
                 <i class="icon ion-social-instagram">
-                  <img src="./" />
+                  <img
+                    class="icons"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/900px-Instagram_icon.png?20200512141346"
+                  />
                 </i>
               </a>
             </div>
@@ -45,12 +55,15 @@ class Footer extends React.Component {
 
           <div className="midDiv">
             <div className="midDivItem">
-              <img src="./" width={"40px"} />
+              <img class="icons" src="https://pixy.org/download/101169/" />
               <a href="#">email@email.com</a>
             </div>
             <div className="midDivItem">
-              <img src="./" width={"40px"} />
-              <a href="#">07********</a>
+              <img
+                class="icons"
+                src="https://i.pinimg.com/736x/00/3d/ff/003dfff29dc38294446b0a306d0e5079.jpg"
+              />
+              <a href="#">0712345678</a>
             </div>
           </div>
 

@@ -1,28 +1,33 @@
 .whyUs{
-    text-align: center;
+  text-align: center;
 	display: flex;
 	justify-content:space-between;
 	padding-left: 260px;
   padding-right: 260px;
+  margin-bottom: 150px;
+  margin-top: 50px;
   
 }
 .part{
    
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding-top: 80px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
     align-items: center;
     width: 100px;
-  
+    font-family: 'Avenir Next LT Pro', sans-serif;
 }
 .myimg2{
-  width: 70px;
+  width: 120px;
   margin: 50px;
   
 }
 .part p{
 width: 300px;
-font-size: 12px;
+font-size: 23px;
 text-align: center;
 
 }
