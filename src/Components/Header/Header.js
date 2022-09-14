@@ -65,9 +65,9 @@ class Header extends React.Component {
 
         <Navbar collapseOnSelect expand="lg" className={this.state.style}>
           <div style={{ display: "flex" }}>
-            <Navbar.Brand className="logo">
+            <Navbar.Brand>
               <Link to="/" className="nav-link">
-                <img width="66px" src={logo}></img>
+                <img className="logo" width="66px" src={logo}></img>
               </Link>
             </Navbar.Brand>
 
@@ -125,7 +125,7 @@ class Header extends React.Component {
               <button className=" profile">
                 <img
                   src={picture}
-                  width={"50px"}
+                  width={"80px"}
                   styles={{ borderRadius: "50px" }}
                 />
               </button>

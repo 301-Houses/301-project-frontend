@@ -1,11 +1,11 @@
 
 .FooterContainer {
-  background: rgb(32, 32, 32);
+  background: rgb(0, 0, 0);
   display:flex;
   justify-content:space-between;
   padding-left: 60px;
   padding-right: 60px;
-  padding-top: 50px;
+ 
   padding-bottom: 20px;
   font-size: 24px;
   color: white;
@@ -37,7 +37,7 @@
 }
 
 .midDiv {
-  font-size: 24px;
+  font-size: 34px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -61,6 +61,7 @@
   gap: 30px;
   padding-left: 20px;
   padding-right: 20px;
+  font-size: 32px;
  
 
 }
@@ -101,4 +102,15 @@
 button a {
   text-decoration: none;
   color: white; 
+}
+
+.icons{
+  width: 50px;
+  background-color: beige;
+  border-radius: 35px;
+
+
+}
+.last label{
+  font-size: large;
 }
