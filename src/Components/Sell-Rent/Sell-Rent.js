@@ -2,24 +2,71 @@ import React from "react";
 import CreateHouseForm from "./forms/CreateHouseForm";
 import "./Sell-Rent.css";
 import $ from "jquery";
+import { withAuth0 } from "@auth0/auth0-react";
+import axios from "axios";
 import Map from "./../Map/Map";
+
 class SellRent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+  constructor(props){
+    super(props)
+    this.state={
+      name:"",
       postion: [],
-    };
+    }
   }
+  handelSubmite=(e)=>{
+    e.preventDefault()
+    const { user } = this.props.auth0;
+    let  email=user.email
+    let ownerName=e.target.ownerName.value
+    let imgURL=e.target.imgURL.value
+    let  houseAddress=e.target.houseAddress.value
+    let houseSize=e.target.HouseSize.value
+    let numOfRoomse=e.target.numOfRoomse.value
+    let price=e.target.price.value
+    let  phoneNumber=e.target.phoneNumber.value
+    let ispremium=e.target.isPremuim.checked
+    let obj={
+       imgURL: imgURL,         
+        ownerName:ownerName,
+        houseAddress :houseAddress,
+        houseSize :houseSize,
+        numOfRoomse:numOfRoomse,
+        isSold:false,
+        price:price,
+        email:email,
+        phoneNumber:phoneNumber,
+        ispremium:ispremium,
+        status:this.state.name,
+        lat:30,
+        long:35
+    }
+    axios.post("http://localhost:3001/house",obj)
+    console.log(obj)
+  }
+handleChange=(e)=>{
+
+console.log("hi")
+    this.setState({
+        name:e.target.value
+    })
+    console.log(e.target.value)
+}
+
   getPostion = (postion) => {
     this.setState({
       postion: postion,
     });
   };
+
+
+  
+
   render() {
     console.log("Inside Sell Rent");
     console.log(this.state);
     return (
-      <div
+         <div
         style={{
           display: "flex",
           justifyContent: "space-between",
@@ -38,44 +85,50 @@ class SellRent extends React.Component {
                 <fieldset class="section is-active">
                   <h3>Hosue Details</h3>
                   <input
-                    type="text"
-                    name="HouseSize"
-                    id="name"
-                    placeholder="House Size"
-                  />
-                  <input
-                    type="text"
-                    name="rooms"
-                    id="email"
-                    placeholder="Number of rooms"
-                  />
+                  type="text"
+                  name="imgURL"
+                  id="imgURL"
+                  placeholder="imageURL"
+                />
+                <input
+                  type="text"
+                  name="HouseSize"
+                  id="name"
+                  placeholder="House Size"
+                />
+                <input
+                  type="text"
+                  name="numOfRoomse"
+                  id="email"
+                  placeholder="Number of rooms"
+                />
 
-                  <input
-                    type="text"
-                    name="address"
-                    id="email"
-                    placeholder="House Address"
-                  />
+                <input
+                  type="text"
+                  name="houseAddress"
+                  id="email"
+                  placeholder="House Address"
+                />
 
-                  <input
-                    type="text"
-                    name="Price"
-                    id="email"
-                    placeholder="Price"
-                  />
+                <input
+                  type="text"
+                  name="price"
+                  id="email"
+                  placeholder="Price"
+                />
                   <div class="button">Next</div>
                 </fieldset>
                 <fieldset class="section">
                   <h3>House Type</h3>
                   <div class="row cf">
                     <div class="four col">
-                      <input type="radio" name="r1" id="r1xxxx" checked />
+                      <input type="radio" name="r1" id="r1"  value="Sell"  onClick={this.handleChange}/>
                       <label for="r1">
                         <h4>Sell</h4>
                       </label>
                     </div>
                     <div class="four col">
-                      <input type="radio" name="r1" id="rx2" />
+                      <input type="radio" name="r1" id="r2" value="Rent" onClick={this.handleChange}/>
                       <label for="r2">
                         <h4>Rent</h4>
                       </label>
@@ -84,23 +137,23 @@ class SellRent extends React.Component {
                   <div class="button">Next</div>
                 </fieldset>
                 <fieldset class="section">
-                  <h3>Owner Details</h3>
-                  <input
-                    type="text"
-                    name="ownerName"
-                    id="password"
-                    placeholder="Owner Name"
-                  />
-                  <input
-                    type="text"
-                    name="ownerPhoneNumber"
-                    id="passwords"
-                    placeholder="Enter your phone number"
-                  />
-                  <input type="checkbox" name="isPremuim" />
-                  <label style={{ marginLeft: "30px", marginTop: "10px" }}>
-                    Premuim AD
-                  </label>
+                    <h3>Owner Details</h3>
+                    <input
+                      type="text"
+                      name="ownerName"
+                      id="ownerName"
+                      placeholder="Owner Name"
+                    />
+                    <input
+                      type="text"
+                      name="phoneNumber"
+                      id="phoneNumber"
+                      placeholder="Enter your phone number"
+                    />
+                    <input type="checkbox" name="isPremuim" />
+                    <label style={{ marginLeft: "30px", marginTop: "10px" }}>
+                      Premuim AD
+                    </label>
 
                   <br></br>
                   <input class="button" type="submit" value="Create" />
@@ -145,4 +198,4 @@ class SellRent extends React.Component {
   }
 }
 
-export default SellRent;
+export default withAuth0(SellRent);

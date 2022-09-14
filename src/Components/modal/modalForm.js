@@ -3,6 +3,11 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import "./modalForm.css";
 class modal extends React.Component {
+
+  onChange1 = e => {
+    console.log(e.target.value); 
+  };
+
     render() {
       return (
         <Modal.Dialog  className="dialog">
@@ -25,11 +30,16 @@ class modal extends React.Component {
     <label for="PhoneN" > Phone Number </label>
      <input type="text" id="PhoneN" name="PhoneN" ></input><br/>
    
-     <label  class="rad-label" for="isPremium" > Is Premium </label>
-    <input class="rad-input" type="radio" id="isPremium" name="Premium" ></input><br/>
+    <input type="checkbox" id="isPremium" name="Premium" ></input><br/>
+        <div >
+    <input onChange ={this.onChange1}  value={1} class="rad-input" type="radio"  name="Status" ></input>
+     <label  class="rad-label" for="status" > For Sale </label>
    
-    <label  class="rad-label" for="status" > Status</label>
-    <input class="rad-input" type="radio" id="status" name="Status" ></input><br/>
+    <input  onChange ={this.onChange1} onClick={()=>{console.log("TYSEASDASD")}} value={2}  class="rad-input" type="radio"  name="Status" ></input>
+    <label  class="rad-label" for="status" > For Rent </label>
+    </div>
+
+    
    
     
     

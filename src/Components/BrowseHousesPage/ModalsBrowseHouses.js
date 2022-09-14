@@ -32,4 +32,4 @@ export class ModalsBrowseHouses extends Component {
   }
 }
 
-export default ModalsBrowseHouses
+export default ModalsBrowseHouses;
