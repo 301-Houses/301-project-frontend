@@ -4,27 +4,30 @@ import "./Sell-Rent.css";
 import $ from "jquery";
 import { withAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
+import Map from "./../Map/Map";
+
 class SellRent extends React.Component {
   constructor(props){
     super(props)
     this.state={
-      name:""
+      name:"",
+      postion: [],
     }
   }
   handelSubmite=(e)=>{
     e.preventDefault()
     const { user } = this.props.auth0;
     let  email=user.email
-  let ownerName=e.target.ownerName.value
-  let imgURL=e.target.imgURL.value
-  let  houseAddress=e.target.houseAddress.value
-  let houseSize=e.target.HouseSize.value
+    let ownerName=e.target.ownerName.value
+    let imgURL=e.target.imgURL.value
+    let  houseAddress=e.target.houseAddress.value
+    let houseSize=e.target.HouseSize.value
     let numOfRoomse=e.target.numOfRoomse.value
     let price=e.target.price.value
     let  phoneNumber=e.target.phoneNumber.value
     let ispremium=e.target.isPremuim.checked
-   let obj={
-      imgURL: imgURL,         
+    let obj={
+       imgURL: imgURL,         
         ownerName:ownerName,
         houseAddress :houseAddress,
         houseSize :houseSize,
@@ -34,9 +37,9 @@ class SellRent extends React.Component {
         email:email,
         phoneNumber:phoneNumber,
         ispremium:ispremium,
-      status:this.state.name,
-      lat:30,
-      long:35
+        status:this.state.name,
+        lat:30,
+        long:35
     }
     axios.post("http://localhost:3001/house",obj)
     console.log(obj)
@@ -50,22 +53,38 @@ console.log("hi")
     console.log(e.target.value)
 }
 
+  getPostion = (postion) => {
+    this.setState({
+      postion: postion,
+    });
+  };
+
 
   
+
   render() {
+    console.log("Inside Sell Rent");
+    console.log(this.state);
     return (
-      <div className="formBody">
-        <div class="container">
-          <div class="wrapper">
-            <ul class="steps">
-              <li class="is-active">Step 1</li>
-              <li>Step 2</li>
-              <li>Step 3</li>
-            </ul>
-            <form onSubmit={this.handelSubmite} class="form-wrapper">
-              <fieldset class="section is-active">
-                <h3>Hosue Details</h3>
-                <input
+         <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          padding: "100px",
+        }}
+      >
+        <div className="formBody">
+          <div class="container">
+            <div class="wrapper">
+              <ul class="steps">
+                <li class="is-active">Step 1</li>
+                <li>Step 2</li>
+                <li>Step 3</li>
+              </ul>
+              <form class="form-wrapper">
+                <fieldset class="section is-active">
+                  <h3>Hosue Details</h3>
+                  <input
                   type="text"
                   name="imgURL"
                   id="imgURL"
@@ -97,53 +116,57 @@ console.log("hi")
                   id="email"
                   placeholder="Price"
                 />
-                <div class="button">Next</div>
-              </fieldset>
-              <fieldset class="section">
-                <h3>House Type</h3>
-                <div class="row cf">
-                  <div class="four col">
-                    <input type="radio" name="r1" id="r1"  value="Sell"  onClick={this.handleChange}/>
-                    <label for="r1">
-                      <h4>Sell</h4>
-                    </label>
+                  <div class="button">Next</div>
+                </fieldset>
+                <fieldset class="section">
+                  <h3>House Type</h3>
+                  <div class="row cf">
+                    <div class="four col">
+                      <input type="radio" name="r1" id="r1"  value="Sell"  onClick={this.handleChange}/>
+                      <label for="r1">
+                        <h4>Sell</h4>
+                      </label>
+                    </div>
+                    <div class="four col">
+                      <input type="radio" name="r1" id="r2" value="Rent" onClick={this.handleChange}/>
+                      <label for="r2">
+                        <h4>Rent</h4>
+                      </label>
+                    </div>
                   </div>
-                  <div class="four col">
-                    <input type="radio" name="r1" id="r2" value="Rent" onClick={this.handleChange}/>
-                    <label for="r2">
-                      <h4>Rent</h4>
+                  <div class="button">Next</div>
+                </fieldset>
+                <fieldset class="section">
+                    <h3>Owner Details</h3>
+                    <input
+                      type="text"
+                      name="ownerName"
+                      id="ownerName"
+                      placeholder="Owner Name"
+                    />
+                    <input
+                      type="text"
+                      name="phoneNumber"
+                      id="phoneNumber"
+                      placeholder="Enter your phone number"
+                    />
+                    <input type="checkbox" name="isPremuim" />
+                    <label style={{ marginLeft: "30px", marginTop: "10px" }}>
+                      Premuim AD
                     </label>
-                  </div>
-                </div>
-                <div class="button">Next</div>
-              </fieldset>
-              <fieldset class="section">
-                <h3>Owner Details</h3>
-                <input
-                  type="text"
-                  name="ownerName"
-                  id="ownerName"
-                  placeholder="Owner Name"
-                />
-                <input
-                  type="text"
-                  name="phoneNumber"
-                  id="phoneNumber"
-                  placeholder="Enter your phone number"
-                />
-                <input type="checkbox" name="isPremuim" />
-                <label style={{ marginLeft: "30px", marginTop: "10px" }}>
-                  Premuim AD
-                </label>
 
-                <br></br>
-                <input class="button" type="submit" value="Create" />
-              </fieldset>
-              <fieldset class="section">
-                <h3>House Created!</h3>
-              </fieldset>
-            </form>
+                  <br></br>
+                  <input class="button" type="submit" value="Create" />
+                </fieldset>
+                <fieldset class="section">
+                  <h3>House Created!</h3>
+                </fieldset>
+              </form>
+            </div>
           </div>
+        </div>
+        <div style={{ display: "inline-flex", width: "900px" }}>
+          <Map getPostion={this.getPostion} />
         </div>
       </div>
     );
