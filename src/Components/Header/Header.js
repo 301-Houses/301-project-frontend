@@ -3,7 +3,11 @@ import { PopupMenu } from "react-simple-widgets";
 import { Navbar, NavItem } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import image1 from "./test2.jpg";
+
+import image1 from "./test1.jpg";
+import image2 from "./test2.jpg";
+import logo from "./logotest.png";
+
 import "./Header.css";
 import profileImg from "./profileIMG.png";
 
@@ -11,6 +15,9 @@ import { withAuth0 } from "@auth0/auth0-react";
 import LoginButton from "./../OAuth/LoginButton";
 import LogoutButton from "./../OAuth/LogoutButton";
 
+const RandomPick = Math.floor(Math.random() * 2);
+const Pictures = [image1, image2];
+const SelectedPicture = Pictures[RandomPick];
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -60,10 +67,7 @@ class Header extends React.Component {
           <div style={{ display: "flex" }}>
             <Navbar.Brand className="logo">
               <Link to="/" className="nav-link">
-                <img
-                  width="66px"
-                  src="https://i.pinimg.com/736x/0d/cf/b5/0dcfb548989afdf22afff75e2a46a508.jpg"
-                ></img>
+                <img width="66px" src={logo}></img>
               </Link>
             </Navbar.Brand>
 
@@ -91,6 +95,11 @@ class Header extends React.Component {
                   <NavItem>
                     <Link to="/YourAssests" className="nav-link">
                       Your Assests
+                    </Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link to="/byMap" className="nav-link">
+                      Browse By Map
                     </Link>
                   </NavItem>
                 </div>
