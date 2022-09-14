@@ -1,0 +1,78 @@
+.mb-3{
+  width: 50%;
+}
+
+.tb {
+  display: table;
+  width: 98%;
+}
+
+.td {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.s input,  button {
+  color: #fff;
+  background-color: transparent;
+}
+.s input{
+  border: none;
+  outline: none;
+
+}
+
+#cover {
+    
+  width: 100%;
+  background-color:#0b94e9f4;
+  border-radius: 20px;
+  transform: scale(0.6);
+}
+
+
+.s input[type="text"] {
+  width: 90%;
+  height: 90px;
+  font-size: 30px;
+  line-height: 1px;
+  margin-left: 50px;
+ 
+
+
+}
+
+.s input[type="text"]::placeholder {
+  color: #fffffff4;
+}
+
+#s-cover {
+  width: 1px;
+  padding-left: 35px;
+}
+
+.s button {
+  position: relative;
+  display: block;
+  border: 0;
+  color: #fff;
+  font-size: 25px;
+
+}
+
+.s  .btn:first-child:hover, :not(.btn-check)+.btn:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0);
+  border-color:#fff;
+}
+
+.s .dropdown-menu {
+font-size: 25px; 
+
+}
+.dropdown-item{
+padding-top: 30px;
+padding-bottom: 20px;
+padding-right: 150px;
+
+}
