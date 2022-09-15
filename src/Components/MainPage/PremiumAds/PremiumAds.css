@@ -1,66 +1,63 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-  }
+  font-family: "Open Sans", sans-serif;
+}
 
-  
-  .PremuimCard {
-    display: flex;
-    flex-direction: column;
-   
-    /* height: 300px;
+.PremuimCard {
+  display: flex;
+  flex-direction: column;
+
+  /* height: 300px;
     width: 330px; */
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    box-shadow: -0.5rem 0 1rem rgba(159, 135, 255, 1.389);
-    background: white;
-    /* margin-left: -50px; */
-    transition: 0.4s ease-out;
-    position: relative;
-    /* left: 0px; */
-    padding: 0 0 50px 0;
-  }
-  
-  .PremuimCard:not(:first-child) {
-      margin-left: -50px;
-  }
-  
-  .PremuimCard:hover {
-    transform: translateY(-20px);
-    transition: 0.4s ease-out;
-  }
-  
-  .PremuimCard:hover ~ .PremuimCard {
-    position: relative;
-    left: 50px;
-    transition: 0.4s ease-out;
-  }
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: -0.5rem 0 1rem rgba(159, 135, 255, 1.389);
+  background: white;
+  /* margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  /* left: 0px; */
+  padding: 0 0 50px 0;
+}
 
-  .a{
-    /* position: absolute; */
-    height: 750px;
-    top: 60px;
-    /* left: calc(50% - 300px); */
-    display: flex;
-    gap: 150px;
-    
+.PremuimCard:not(:first-child) {
+  margin-left: -50px;
+}
 
-  }
-  .myimg {
-    
-    height: 350px; 
-    width: 229px;  
-    border-radius: 10px;
-    width: 100%;
+.PremuimCard:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
 
-   
-  }
-  
-  .des{
+.PremuimCard:hover ~ .PremuimCard {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
 
-    width: 225px;
-    padding: 15px;
-    font-size: 16px;
-  }
-  
- 
+.a {
+  /* position: absolute; */
+  height: 750px;
+  top: 60px;
+  /* left: calc(50% - 300px); */
+  display: flex;
+  gap: 150px;
+}
+.myimg {
+  height: 350px;
+  width: 229px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.des {
+  width: 225px;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.price {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
