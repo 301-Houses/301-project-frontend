@@ -1,0 +1,116 @@
+
+.FooterContainer {
+  background: rgb(0, 0, 0);
+  display:flex;
+  justify-content:space-between;
+  padding-left: 60px;
+  padding-right: 60px;
+ 
+  padding-bottom: 20px;
+  font-size: 24px;
+  color: white;
+
+}
+
+
+.socialDiv  {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white; 
+  justify-content: center;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+
+ 
+}
+
+.iconsDiv {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+}
+
+.midDiv {
+  font-size: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: white; 
+  justify-content: center;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: inherit;
+  text-decoration: none;
+
+}
+
+.midDiv a {
+  text-decoration: none;
+  color: white; 
+}
+
+.midDivItem {
+  display:flex;
+  gap: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 32px;
+ 
+
+}
+
+.messageDiv{
+  padding: 50px 30px 20px 30px;
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+ 
+}
+
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;
+  padding-left : 20px;
+  padding-right: 20px;
+
+  /* background: rgb(32, 32, 32); */
+   
+  text-align: center;
+  justify-content: center;
+   
+   
+  font-family: poppins;
+}
+ 
+.inputs {
+  padding-left: 30px;
+  padding-right: 30px;
+
+}
+
+button a {
+  text-decoration: none;
+  color: white; 
+}
+
+.icons{
+  width: 50px;
+  background-color: beige;
+  border-radius: 35px;
+
+
+}
+.last label{
+  font-size: large;
+}

@@ -13,7 +13,7 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ width: "70vw" }}>
         <InputGroup className="mb-3"></InputGroup>
         <div className="s">
           <div id="cover">
@@ -22,17 +22,23 @@ class SearchBar extends React.Component {
                 <div className="td">
                   <input type="text" placeholder="Search" required></input>
                 </div>
-                <div className="td" id="s-cover">                
+                {/* <div className="td" id="s-cover">
                   <DropdownButton
                     variant="outline-secondary"
                     title="Sorting"
                     id="input-group-dropdown-1"
                   >
-                    <Dropdown.Item href="#">Price</Dropdown.Item>
-                    <Dropdown.Item href="#">Date</Dropdown.Item>
-                    <Dropdown.Item href="#">Location</Dropdown.Item>
+                    <Dropdown.Item className="itemMenu" href="#">
+                      Price
+                    </Dropdown.Item>
+                    <Dropdown.Item className="itemMenu" href="#">
+                      Date
+                    </Dropdown.Item>
+                    <Dropdown.Item className="itemMenu" href="#">
+                      Location
+                    </Dropdown.Item>
                   </DropdownButton>
-                </div>
+                </div> */}
               </div>
             </form>
           </div>

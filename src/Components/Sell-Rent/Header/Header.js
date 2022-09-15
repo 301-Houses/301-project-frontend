@@ -12,8 +12,8 @@ import "./Header.css";
 import profileImg from "./profileIMG.png";
 
 import { withAuth0 } from "@auth0/auth0-react";
-import LoginButton from "./../OAuth/LoginButton";
-import LogoutButton from "./../OAuth/LogoutButton";
+import LoginButton from "./../../OAuth/LoginButton";
+import LogoutButton from "./../../OAuth/LogoutButton";
 
 const RandomPick = Math.floor(Math.random() * 2);
 const Pictures = [image1, image2];
@@ -26,14 +26,14 @@ class Header extends React.Component {
       user: {},
     };
   }
-  handleScroll = (e) => {
-    if (window.pageYOffset > 690) {
-      this.setState({ style: "mainNavBar sticky" });
-    }
-    if (window.pageYOffset < 690) {
-      this.setState({ style: "mainNavBar" });
-    }
-  };
+  // handleScroll = (e) => {
+  //   if (window.pageYOffset > 290) {
+  //     this.setState({ style: "mainNavBar sticky" });
+  //   }
+  //   if (window.pageYOffset < 690) {
+  //     this.setState({ style: "mainNavBar" });
+  //   }
+  // };
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
@@ -61,8 +61,6 @@ class Header extends React.Component {
 
     return (
       <div onScroll={this.handleScroll}>
-        <div className="navbarBackground"></div>
-
         <Navbar collapseOnSelect expand="lg" className={this.state.style}>
           <div style={{ display: "flex" }}>
             <Navbar.Brand>
@@ -115,7 +113,7 @@ class Header extends React.Component {
                 </Link>
               </NavItem>
               <NavItem>
-                <LoginButton />
+                <LoginButton id="login" />
               </NavItem>
             </div>
           )}
@@ -167,30 +165,6 @@ class Header extends React.Component {
             </PopupMenu>
           )}
         </Navbar>
-
-        <div className="headerContent">
-          <div className="firstHeader">
-            <h1>Move to What Moves You</h1>
-            <h1> Historic & Charming Apartments </h1>
-            <p>
-              With Sweet Home We are proud to present carefully selected Houses{" "}
-              <br /> in the most elegant way to your admiration and
-              satisfaction.
-            </p>
-
-            {!isLoggedIn && (
-              <div className="getStarted">
-                <button
-                  type="button"
-                  className="btn btn-outline-primary"
-                  data-mdb-ripple-color="dark"
-                >
-                  <LoginButton text="Get Started" />
-                </button>
-              </div>
-            )}
-          </div>
-        </div>
       </div>
     );
   }

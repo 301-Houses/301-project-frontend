@@ -1,4 +1,10 @@
 
-.OBtn{
-    background-color: transparent;
+.getStarted {
+    text-align : right;
+    padding-right: 195px;
+}
+
+.getStarted button{
+    background-color: rgb(39, 147, 209, 0.5);
+    color: white;
 }

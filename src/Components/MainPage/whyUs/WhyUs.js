@@ -14,27 +14,22 @@ class WhyUs extends React.Component {
           <div className="part">
             <img className="myimg2" src={img1} alt="Logo" />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              maximus, nulla ut commodo sagittis, sapien dui mattis dui, non
-              pulvinar lorem felis nec erat
+              <h1>Accurate Data</h1> <br></br>
             </p>
           </div>
 
           <div className="part">
             <img className="myimg2" src={img2} alt="Logo" />
+
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              maximus, nulla ut commodo sagittis, sapien dui mattis dui, non
-              pulvinar lorem felis nec erat
+              <h1>Suitable Needs</h1> <br></br>
             </p>
           </div>
 
           <div className="part">
             <img className="myimg2" src={img3} alt="Logo" />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              maximus, nulla ut commodo sagittis, sapien dui mattis dui, non
-              pulvinar lorem felis nec erat
+              <h1>Time Saver</h1> <br></br>
             </p>
           </div>
         </div>

@@ -1,0 +1,159 @@
+* {
+    padding : 0;
+    margin : 0;
+}
+
+.mainPageContainer  .navbarBackground {
+ background-image: url('https://media.discordapp.net/attachments/1017413588798951434/1019328177149055037/PHOTOREALPiper-Meadows_Farmhouse_9-2-20-1-1.jpg'); 
+ 
+ padding-bottom :700px;
+ background-size: cover;
+ 
+ filter: blur(1.1px) brightness(43%);
+
+
+}
+
+.mainPageContainer  .mainNavBar {
+  color: white;
+  display: "flex";
+  gap: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 45;
+  
+  
+  justify-content: space-between;  
+}
+
+.mainPageContainer  .sticky {
+ 
+background: rgba(255, 255, 255, 0.53);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.2px);
+-webkit-backdrop-filter: blur(5.2px);
+border: 1px solid rgba(255, 255, 255, 0.22);
+color: black;
+}
+
+.mainPageContainer  .logo {
+    margin-left: 20px;
+    padding-left: 20px;
+    margin-right: 40px;
+    width : 160px;
+    
+}
+
+
+
+.mainPageContainer  .navbarLeftDiv{
+    display : flex;
+    gap: 50px;
+    padding-top: 15px;
+    padding-left: 30px;
+    justify-content : center;
+    font-size : 28px;
+    
+} 
+
+.mainPageContainer  .leftSideNav {
+    display : flex;
+    gap: 50px;
+    padding-top: 15px;
+}
+
+.mainPageContainer  .navbarRightDiv {
+    padding-right: 40px;
+    display : flex;
+    gap: 50px;
+    font-size : 28px;
+}
+
+
+
+.mainPageContainer  .profile {
+    z-index: 10;
+    margin-right: 35px;
+    /* margin-top: 20px; */
+    border-radius: 50%;
+    margin-top: -20px;;
+     
+}
+
+.mainPageContainer  .profile img {
+    border-radius: 50%; 
+ 
+}
+
+
+.mainPageContainer  .profileCard {
+    width: 250px;
+    color: black;
+    background: white;
+
+}
+
+.mainPageContainer  #circle-avatar {
+    display: grid;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ffbd30;
+    place-items: center;
+}
+
+.mainPageContainer  .profileCard span  {
+font-size: 48px;
+font-weight: bold;
+}
+ 
+.mainPageContainer .headerContent {
+
+    position: absolute;
+    text-align: center;
+    
+    left: 18%;
+    top: 26%;
+    z-index: 10;
+    color: white;
+    
+}
+ 
+
+.mainPageContainer  .headerContent .firstHeader{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+   
+    
+}
+
+.mainPageContainer .headerContent h1 {
+    font-size : 55px;
+    text-align: left;
+}
+
+.mainPageContainer  .headerContent p {
+    font-size : 24px;
+    text-align: left;
+}
+
+
+
+.mainPageContainer .headerContent button {
+    font-size : 40px;
+    
+}
+
+.mainPageContainer .getStarted {
+    text-align : right;
+    padding-right: 195px;
+}
+
+.getStarted button{
+    background-color: rgb(39, 147, 209, 0.5);
+    color: white;
+}

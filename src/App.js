@@ -1,14 +1,13 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import Header from "./Components/Header/Header";
+
 import MainPage from "./Components/MainPage/MainPage";
 import BrowsePage from "./Components/BrowseHousesPage/BrowseHouses";
 import SellRent from "./Components/Sell-Rent/Sell-Rent";
 import YourAssets from "./Components/YourAssestsPage/YourAssets";
 import MapPage from "./Components/Map/MapPage";
 
-import Footer from "./Components/Footer/Footer";
 import { withAuth0 } from "@auth0/auth0-react";
 
 import {
@@ -26,7 +25,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
-          <Header />
           <Routes>
             <Route exact path="/" element={<MainPage />} />
           </Routes>
@@ -62,8 +60,6 @@ class App extends React.Component {
               element={isAuthenticated ? <MapPage /> : <Navigate to="/" />}
             />
           </Routes>
-
-          <Footer />
         </Router>
       </div>
     );
